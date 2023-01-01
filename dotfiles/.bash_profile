@@ -22,6 +22,7 @@ alias be='bundle exec'
 alias k='kubectl'
 
 set -o vi
+export EDITOR=vim
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -s "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
